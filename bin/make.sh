@@ -8,4 +8,4 @@ cd build
 cmake ..
 make
 
-cp nw-hello ..
+cp nw-* ..
