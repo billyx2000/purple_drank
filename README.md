@@ -1,6 +1,7 @@
 # NetWorld - Game Engine for IAs competition
 
 
+
 ## Installation sour linux (Ubuntu):
 
 **recomandé...**
@@ -49,12 +50,10 @@ make
 
 ## Optimisation de routage dynamique (Pb. réseaux)
 
-
 Générer des robots et les déplacer pour couvrir au mieux un réseaux.
 
 - être résiliant aux pannes
 - Réseau en constance augmentation
 - Circonscrire les Zones defectueuse....
-
 
 ## WarBot

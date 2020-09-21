@@ -10,6 +10,6 @@ find_package(raylib 2.0 REQUIRED)
 # project configuration :
 include_directories(${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/src)
 
-add_executable(nw-test src/test.c)
+add_executable(nw-hello src/hello.c)
 #set(raylib_VERBOSE 1)
-target_link_libraries(nw-test raylib)
+target_link_libraries(nw-hello raylib)
