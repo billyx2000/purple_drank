@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(networld LANGUAGES C)
 
 # Activate C99 standard:
-SET(CMAKE_C_FLAGS "-std=c99 -Wall -Wextra" )
+SET(CMAKE_C_FLAGS "-g -std=c99 -Wall -Wextra" )
 
 # RayLib:
 find_package(raylib 2.0 REQUIRED)
