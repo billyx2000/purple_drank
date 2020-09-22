@@ -12,7 +12,8 @@ Dans un terminal:
 
 ```bash
 sudo apt update
-sudo apt install gcc CMake
+sudo apt install build-essential git cmake
+sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev
 ```
 
 Installer Raylib sur la version 3.0.0 sous linux [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)] en suivant le 'Build raylib using CMake' un peut modifie suivant:
@@ -20,7 +21,7 @@ Installer Raylib sur la version 3.0.0 sous linux [[cf. raylib-wiki](https://gith
 ```bash
 git clone https://github.com/raysan5/raylib.git raylib
 cd raylib
-git checkout 3.0.0
+ git checkout '3.0.0'
 mkdir build && cd build
 cmake -DSHARED=ON -DSTATIC=ON ..
 make

@@ -2,7 +2,7 @@
 #define NETWORLD_H
 
 struct Str_Node {
-    float x, y;
+    double x, y;
 };
 typedef struct Str_Node Node;
 
@@ -18,5 +18,8 @@ void NetWorld_delete(NetWorld * aWorld);
 
 // Initialization
 void NetWorld_initPosition(NetWorld * self, float ** position); // position must be an float[size][2] array...
+
+// To String
+void NetWorld_print(NetWorld * self);
 
 #endif //NETWORLD_H
