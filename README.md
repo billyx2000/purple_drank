@@ -15,34 +15,30 @@ sudo apt update
 sudo apt install gcc CMake
 ```
 
-Installer Raylib sous linux [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)] en suivant le 'Build raylib using CMake':
+Installer Raylib sur la version 3.0.0 sous linux [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)] en suivant le 'Build raylib using CMake' un peut modifie suivant:
 
 ```bash
 git clone https://github.com/raysan5/raylib.git raylib
 cd raylib
+git checkout 3.0.0
 mkdir build && cd build
 cmake -DSHARED=ON -DSTATIC=ON ..
 make
-make install
+sudo make install
 cd ..
 ```
 
 First test of RayLib:
 
 ```bash
-gcc -o nw-test src/test.c -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
-./nw-test
+gcc -o nw-hello src/hello.c -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+./nw-hello
 ```
 
-With CMake:
-
+Compiling NetWorld using a little home made script:
 
 ```bash
-mkdir build
-cd build
-cmake ..
-make
-./nw-test
+bin/make.sh
 ```
 
 ## Idée de jeux induit:
