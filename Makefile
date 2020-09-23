@@ -1,14 +1,25 @@
 
 all: config
-	make -C src
-	mv src/nw-* .
+	@make -C src
 
-config:
-	echo "# Configuration for make" > config
-	echo "OS= `uname`"  >> config
-	echo "CC=gcc" >> config
-	echo "CFLAGS=-std=c99 -Wall -Wextra `pkg-config --cflags raylib`" >> config
-	echo "LIBS= `pkg-config --libs raylib`" >> config
+config: 
+	cp config.default config 
+
+unix:
+	@echo "generate Bath config"
+	@echo "# Configuration for make" > config
+	@echo "CC=gcc" >> config
+	@echo "CFLAGS=-std=c99 -Wall -Wextra -lraylib" >> config
+	@echo "LIBS= -lraylib" >> config
+	@echo "OS=`uname`"  >> config
+
+windows: 
+	@echo "generate PowerShell config"
+	@echo # Configuration for make > config
+	@echo OS=Windows >> config
+	@echo CC=gcc >> config
+	@echo CFLAGS=-std=c99 -Wall -Wextra` >> config
+	@echo LIBS= -lraylib >> config
 
 clean:
-	make -C src clean
+	@make -C src clean

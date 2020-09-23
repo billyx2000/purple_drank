@@ -1,5 +1,9 @@
 # NetWorld - Game Engine for IAs competition
 
+## Dependance
+
+Raylib.
+
 ## Installation sour Linux (Ubuntu):
 
 **Fortement recommandé...**
@@ -16,7 +20,6 @@ sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-d
 
 Cloner NetWorld.
 
-
 Installer Raylib sur la version 3.0.0 sous linux [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)] en suivant le 'Build raylib using CMake' un peut modifie suivant:
 
 ```bash
@@ -30,12 +33,10 @@ sudo make install
 cd ..
 ```
 
-
-
 First test of RayLib:
 
 ```bash
-gcc -o nw-hello src/hello.c -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+gcc -o nw-hello src/main-hello.c -std=c99 -Wall -Wextra -lraylib
 ./nw-hello
 ```
 
@@ -63,7 +64,7 @@ Rebooter la machine.
 
 Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib)] en passant par la [release](https://github.com/raysan5/raylib/releases) pour MinGW.
 
-- Télécharger la version 3.0.0 de RayLib pour [Win32 mingw](raylib-3.0.0-Win32-mingw.zip) (même sur une machine 64bit).
+- Télécharger la version 3.0.0 de RayLib pour [Win32 mingw](https://github.com/raysan5/raylib/releases/download/3.0.0/raylib-3.0.0-Win32-mingw.zip) (même sur une machine 64bit).
 - Extraire et copier le contenu des repertoires bin include et lib respectivement dans les répertoires bin, include et lib se trouvant dans "C:\MinGW"
 - copier "C:\MinGW\bin\libraylib.dll" en "C:\MinGW\bin\raylib.dll". 
 Dans un terminal PowerShell:
