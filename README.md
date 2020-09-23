@@ -1,8 +1,8 @@
 # NetWorld - Game Engine for IAs competition
 
-## Installation sour linux (Ubuntu):
+## Installation sour Linux (Ubuntu):
 
-**fortement recomandé...**
+**Fortement recommandé...**
 
 Installer gcc, CMake et git:
 
@@ -13,6 +13,9 @@ sudo apt update
 sudo apt install build-essential git cmake
 sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-dev xorg-dev libgl1-mesa-dev libglu1-mesa-dev
 ```
+
+Cloner NetWorld.
+
 
 Installer Raylib sur la version 3.0.0 sous linux [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)] en suivant le 'Build raylib using CMake' un peut modifie suivant:
 
@@ -34,19 +37,19 @@ gcc -o nw-hello src/hello.c -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 ./nw-hello
 ```
 
-Compiling NetWorld using a little home made script:
+Compiling NetWorld using a little home-made script:
 
 ```bash
-bin/make.sh
+bin/build.sh
 ```
 
 ## Installation sous Window :
 
-**non recomandé**
+**non recommandé**
 
 Installer Minimalist GNU for Windows GCC tools' set ([MinGW](http://www.mingw.org/)) with [setup UI](the https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/) program.
 L'installer directement à la racine de votre système (C:).
-Select the developer toolkit (that automaticly include msys), base-bin, and gcc for C++. Ne pas oublier de faire un "installation>update changes".
+Select the developer toolkit (that automatically include msys), base-bin, and gcc for C++. Ne pas oublier de faire un "installation>update changes".
 
 Ajouter "C:\MinGW\bin" dans votre variable d'environnement PATH. et rebooter la machine. (panneau de conifg. - système - param. système avancé - variable d'env. - PATH)
 
@@ -54,11 +57,11 @@ Installer [Git for Windows](https://gitforwindows.org/).
 
 Installer VSC (Visual Studio Code), on utilisera son terminal PowerShell.
 
-Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib)] en passant par la realise pour MinGW.
+Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib)] en passant par la release pour MinGW.
 
-- Telecharger la version 3.0.0 de RayLib pour Win32 mingw (même sur une machine 64bit).
-- Extraire et copier le contenue des repertoires bin include et lib respectivement dans les répertoire bin include et lib se trouvant dans "C:\MinGW"
-- Copier "C:\MinGW\bin\libraylib.dll" en "C:\MinGW\bin\raylib.dll". 
+- Télécharger la version 3.0.0 de RayLib pour Win32 mingw (même sur une machine 64bit).
+- Extraire et copier le contenu des repertoires bin include et lib respectivement dans les répertoires bin, include et lib se trouvant dans "C:\MinGW"
+- copier "C:\MinGW\bin\libraylib.dll" en "C:\MinGW\bin\raylib.dll". 
 Dans un terminal PowerShell:
 
 ```bash
@@ -73,15 +76,15 @@ gcc -o nw-hello src/hello.c -std=c99 -lraylib
 ./nw-hello
 ```
 
-## Idée de jeux induit:
+## Idée de jeux induits:
 
 
 ## Optimisation de routage dynamique (Pb. réseaux)
 
-Générer des robots et les déplacer pour couvrir au mieux un réseaux.
+Générer des robots et les déplacer pour couvrir au mieux un réseau.
 
 - être résiliant aux pannes
 - Réseau en constance augmentation
-- Circonscrire les Zones defectueuse....
+- Circonscrire les Zones défectueuses....
 
 ## WarBot
