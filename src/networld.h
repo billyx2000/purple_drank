@@ -17,7 +17,7 @@ NetWorld * NetWorld_new(int aSize);
 void NetWorld_delete(NetWorld * aWorld);
 
 // Initialization
-void NetWorld_initPosition(NetWorld * self, float ** position); // position must be an float[size][2] array...
+void NetWorld_initNodePosition(NetWorld * self, int iNode, double x, double y); // position must be an float[size][2] array...
 
 // To String
 void NetWorld_print(NetWorld * self);

@@ -22,7 +22,6 @@ void game_draw(NetWorld * world);
 //-----------------
 bool game_end;
 
-
 int main(int nbArg, char ** arg)
 {
     // Game Initialization
