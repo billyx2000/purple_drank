@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
 project(networld LANGUAGES C)
+cmake_minimum_required(VERSION 3.10)
 
 # Activate C99 standard:
 SET(CMAKE_C_FLAGS "-g -std=c99 -Wall -Wextra" )

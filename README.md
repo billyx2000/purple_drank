@@ -2,7 +2,7 @@
 
 ## Installation sour linux (Ubuntu):
 
-**recomandé...**
+**fortement recomandé...**
 
 Installer gcc, CMake et git:
 
@@ -45,26 +45,33 @@ bin/make.sh
 **non recomandé**
 
 Installer Minimalist GNU for Windows GCC tools' set ([MinGW](http://www.mingw.org/)) with [setup UI](the https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/) program.
+L'installer directement à la racine de votre système (C:).
 Select the developer toolkit (that automaticly include msys), base-bin, and gcc for C++. Ne pas oublier de faire un "installation>update changes".
 
-Ajouter "C:\MinGW\bin" dans votre variable d'environnement PATH. et rebooter la machine. 
+Ajouter "C:\MinGW\bin" dans votre variable d'environnement PATH. et rebooter la machine. (panneau de conifg. - système - param. système avancé - variable d'env. - PATH)
+
+Installer [Git for Windows](https://gitforwindows.org/).
 
 Installer VSC (Visual Studio Code), on utilisera son terminal PowerShell.
 
-Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-Windows)] en suivant le 'Build raylib using CMake' un peut modifié suivant:
+Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib)] en passant par la realise pour MinGW.
 
+- Telecharger la version 3.0.0 de RayLib pour Win32 mingw (même sur une machine 64bit).
+- Extraire et copier le contenue des repertoires bin include et lib respectivement dans les répertoire bin include et lib se trouvant dans "C:\MinGW"
+- Copier "C:\MinGW\bin\libraylib.dll" en "C:\MinGW\bin\raylib.dll". 
 Dans un terminal PowerShell:
 
 ```bash
-git clone https://github.com/raysan5/raylib.git raylib
-cd raylib
-git checkout '3.0.0'
-cd src
-mingw32-make PLATFORM=PLATFORM_DESKTOP
-````
+cp C:\MinGW\bin\libraylib.dll C:\MinGW\bin\raylib.dll
+```
+Ouf...
 
+On peut tester de compiler un premier programme hello.c avec raylib. Dans un terminal PowerShell:
 
-
+```bash
+gcc -o nw-hello src/hello.c -std=c99 -lraylib
+./nw-hello
+```
 
 ## Idée de jeux induit:
 
