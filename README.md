@@ -30,6 +30,8 @@ sudo make install
 cd ..
 ```
 
+
+
 First test of RayLib:
 
 ```bash
@@ -47,19 +49,21 @@ bin/build.sh
 
 **non recommandé**
 
-Installer Minimalist GNU for Windows GCC tools' set ([MinGW](http://www.mingw.org/)) with [setup UI](the https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/) program.
+Installer Minimalist GNU for Windows GCC tools' set ([MinGW](http://www.mingw.org/)) with the [setup UI](https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/) program.
 L'installer directement à la racine de votre système (C:).
 Select the developer toolkit (that automatically include msys), base-bin, and gcc for C++. Ne pas oublier de faire un "installation>update changes".
 
-Ajouter "C:\MinGW\bin" dans votre variable d'environnement PATH. et rebooter la machine. (panneau de conifg. - système - param. système avancé - variable d'env. - PATH)
+Ajouter "C:\MinGW\bin" dans votre variable d'environnement PATH. (panneau de conifg. - système - param. système avancé - variable d'env. - PATH)
 
 Installer [Git for Windows](https://gitforwindows.org/).
 
 Installer VSC (Visual Studio Code), on utilisera son terminal PowerShell.
 
-Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib)] en passant par la release pour MinGW.
+Rebooter la machine.
 
-- Télécharger la version 3.0.0 de RayLib pour Win32 mingw (même sur une machine 64bit).
+Installer Raylib sur la version 3.0.0 sous Window [[cf. raylib-wiki](https://github.com/raysan5/raylib)] en passant par la [release](https://github.com/raysan5/raylib/releases) pour MinGW.
+
+- Télécharger la version 3.0.0 de RayLib pour [Win32 mingw](raylib-3.0.0-Win32-mingw.zip) (même sur une machine 64bit).
 - Extraire et copier le contenu des repertoires bin include et lib respectivement dans les répertoires bin, include et lib se trouvant dans "C:\MinGW"
 - copier "C:\MinGW\bin\libraylib.dll" en "C:\MinGW\bin\raylib.dll". 
 Dans un terminal PowerShell:
