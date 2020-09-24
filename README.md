@@ -76,7 +76,7 @@ mingw32-base-bin
 mingw32-gcc-g++-bin
 ```
 5. Ensuite, dans la barre de menu, faire : `Installation > Apply Changes > Apply`. Le manager installera automatiquement les packages sélectionnés précédemment.
-6. Une fois les packages installés, **AJOUTER** sur une nouvelle ligne `"C:\MinGW\bin"` dans votre variable d'environnement **PATH**. Pour ce faire : `panneau de conifg. > système et securite > système > param. système avancé > variable d'env. > PATH > Modifier`. Cette variable regroupe l'ensemble des chemins absolus pour accéder aux ressources indiquées.
+6. Une fois les packages installés, **AJOUTER** sur une nouvelle ligne `C:\MinGW\bin` dans votre variable d'environnement **PATH**. Pour ce faire : `panneau de conifg. > système et securite > système > param. système avancé > variable d'env. > PATH > Modifier`. Cette variable regroupe l'ensemble des chemins absolus pour accéder aux ressources indiquées.
 
 **Configuration de GIT**
 
@@ -90,7 +90,7 @@ Installer Raylib en version 3.0.0 sous Windows [[cf. raylib-wiki](https://github
 1. Télécharger la version 3.0.0 de RayLib pour [Win32 mingw](https://github.com/raysan5/raylib/releases/download/3.0.0/raylib-3.0.0-Win32-mingw.zip) (même sur une machine 64bit).
 2. Extraire et déplacer le contenu des repertoires `bin`, `include` et `lib` respectivement dans les répertoires `bin`, `include` et `lib` se trouvant dans `C:\MinGW` (Attention ! Ne pas remplacer les dossiers)
 3. Copier `C:\MinGW\bin\libraylib.dll` dans `C:\MinGW\bin\`, et renommer la copie `raylib.dll`. 
-4. Dans un terminal *git-bash* (pour l'ouvrir `Menu Démarer > Git Bash`), taper la commande suivante :
+4. Dans un terminal *git-bash* (pour l'ouvrir `Menu Démarrer > Git Bash`), taper la commande suivante :
 
 
 ```bash
@@ -114,42 +114,45 @@ cp C:/MinGW/bin/mingw32-make.exe C:/MinGW/bin/make.exe
 Ouf...
 
 
-### Tester l'installation:
+## Teste de l'installation
 
 
-Récupérer l'[exemple](https://www.raylib.com/examples.html) basic de Raylib en copiant le code dans un fichier '*main-basic.c*'
-
-
-Puis compiler dans votre terminal:
-
-
+1. Récupérer l'[exemple](https://www.raylib.com/examples.html) basic de Raylib (le 1er encart) : copier le code dans un fichier `main-basic.c` sur votre machine.
+2. Ouvrir votre terminal, et vous placer dans votre dossier de travail. Par exemple :
 ```bash
-gcc -o basic-raylib main-basic.c -std=c99 -Wall -Wextra -lraylib
+cd C:/Users/me/Documents #Windows
+# OU
+cd /home/me/Documents #Linux
 ```
-Un exécutable est normalement généré:
-
+3. Compiler à partir de votre terminal l'exemple :
 
 ```bash
-./basic-raylib
+gcc -o basic-raylib PATH/TO/main-basic.c -std=c99 -Wall -Wextra -lraylib
 ```
 
+4. Un exécutable est normalement généré. Lancez le pour vous assurez que tout fonctionne bien.
 
-### Compiler NetWorld
+```bash
+./basic-raylib.exe
+```
 
 
-Ya plus qu'à cloner et compiler NetWorld:
+## Compiler NetWorld
+
+
+Il n'y a plus qu'à cloner et compiler NetWorld :
 
 
 ```bash
-git clone ssh://git@gvipers.imt-lille-douai.fr:2222/fatus/networld.git NetWorld
+git clone http://gvipers.imt-lille-douai.fr/fatus/networld.git NetWorld
 cd NetWorld
 make
 ```
 
 
-Des exécutables sont générés au format *nw-xxxx*.
+Des exécutables sont générés au format *nw-xxxx*. Vous verrez également apparaître quelques *warnings* : n'en tenez pas compte.
 
-
+Et voilà !
 
 ## Organisation du répertoire
 
