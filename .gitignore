@@ -7,3 +7,4 @@ raylib
 
 nw-*
 config
+*.o
