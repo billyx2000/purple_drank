@@ -1,24 +1,23 @@
 # NetWorld - Game Engine for IAs competition
 
-NetWorld se veut devenir un moteur de jeux  KISS  (Keep It Stupid Simple) basés sur la librairie multi-plateforme RayLib.
+NetWorld se veut devenir un moteur de jeux basé sur la librairie multi-plateforme RayLib, respectant le principe [KISS](https://fr.wikipedia.org/wiki/Principe_KISS)  (Keep It Stupid Simple) 
 La particularité du projet est de modéliser le monde comme un réseau de positions clés sur lesquelles peuvent de baller les entités en interaction.
 
 ## Installation
 
 
-Projet conçu pour une compilation avec GCC et la librairie Raylib.
+Projet conçu pour une compilation avec GCC et la librairie Raylib. De par la nature de la procédure d'installation et de linkage, Linux est le système d'exploitation à préférer.
 
 
-### Dépendance sous Linux (Ubuntu):
+⚠️ Bien prendre le temps de lire la section d'installation qui vous concerne ⚠️
 
 
-**Fortement recommandé...**
+### Linux (Debian based, *e.g.* Ubuntu) - Fortement recommandé
+---
 
+1. **Installer gcc, CMake et git:**
 
-Installer gcc, CMake et git:
-
-
-Dans un terminal:
+Dans un terminal :
 
 
 ```bash
@@ -28,28 +27,33 @@ sudo apt install libasound2-dev mesa-common-dev libx11-dev libxrandr-dev libxi-d
 ```
 
 
-Installer Raylib sur la version 3.0.0
+2. **Compiler et installer Raylib 3.0.0**
 
+La procédure ci-dessous provient du tutoriel officiel pour linux de raylib ([cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)), adapté pour les besoins du cours.
 
-**Méthode avec compilation de la Raylib:**
+Tout d'abord, placez-vous dans le répertoire de votre choix, *e.g.* :
+```bash
+cd ~/Document/Cours
+```
 
-
-En suivant le tutoriel pour linux [[cf. raylib-wiki](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)], avec un 'Build raylib using CMake' un peut modifié:
-
+Une fois dans le répertoire de votre choix, il vous faut cloner la bibliothèque, et la compiler. Pour cela :
 
 ```bash
 git clone https://github.com/raysan5/raylib.git raylib
 cd raylib
- git checkout '3.0.0'
+git checkout '3.0.0'
 mkdir build && cd build
 cmake -DSHARED=ON -DSTATIC=ON ..
 make
+```
+Ensuite, pour l'installer sur votre système :
+
+```
 sudo make install
 cd ..
 ```
 
-
-Vous pouvez optionnellement détruire le repo.
+Une fois installé, vous pouvez, optionnellement, supprimer le dossier initial téléchargé depuis Github
 
 
 ```bash
