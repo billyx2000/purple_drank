@@ -14,7 +14,7 @@ typedef struct Str_NetWorld NetWorld;
 
 // Constructor / Destructor
 NetWorld * NetWorld_new(int aSize);
-void NetWorld_delete(NetWorld * aWorld);
+void NetWorld_delete(NetWorld * self);
 
 // Initialization
 void NetWorld_initNodePosition(NetWorld * self, int iNode, double x, double y); // position must be an float[size][2] array...

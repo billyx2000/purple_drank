@@ -16,3 +16,6 @@ cmake -DSHARED=ON -DSTATIC=ON ..
 make
 sudo make install
 cd ..
+
+# NetWorld:
+bin/build
