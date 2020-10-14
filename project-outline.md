@@ -9,8 +9,8 @@ Each Functionnality groups several components to develop as UserStories under th
 
 ## Fct.1 - Project Framing.
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers: Bilal
+- @SecondaryDevelopers: Graham
 ---
 
 This functionality cover a framework for the team of developers.
