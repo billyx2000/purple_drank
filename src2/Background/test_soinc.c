@@ -23,10 +23,11 @@ int main(void)
 
     // NOTE: Be careful, background width must be equal or bigger than screen width
     // if not, texture should be draw more than two times for scrolling effect
-    Texture2D background = LoadTexture("img/lvl2/1.png");
-    Texture2D midground = LoadTexture("img/lvl2/2.png");
-    Texture2D foreground = LoadTexture("img/lvl2/3.png");
+    Texture2D background = LoadTexture("img/lvl1/1.png");
+    Texture2D midground = LoadTexture("img/lvl1/2.png");
+    Texture2D foreground = LoadTexture("img/lvl1/3.png");
     Texture2D soinc = LoadTexture("../Game/img/soinc.png");
+    
 
     float scrollingBack = 0.0f;
     float scrollingMid = 0.0f;
@@ -54,8 +55,8 @@ int main(void)
         //----------------------------------------------------------------------------------
 
 	//Test Déplacement
-	if (IsKeyDown(KEY_RIGHT)) soincPosition.x += 2.0f;
-        if (IsKeyDown(KEY_LEFT)) soincPosition.x -= 2.0f;
+	if (IsKeyDown(KEY_RIGHT)) soincPosition.x += 5.0f;
+        if (IsKeyDown(KEY_LEFT)) soincPosition.x -= 5.0f;
         if (IsKeyDown(KEY_UP)) soincPosition.y -= 2.0f;
         if (IsKeyDown(KEY_DOWN)) soincPosition.y += 2.0f;
 
@@ -78,7 +79,7 @@ int main(void)
             DrawTextureEx(foreground, (Vector2){ scrollingFore, 70 }, 0.0f, 2.0f, WHITE);
             DrawTextureEx(foreground, (Vector2){ foreground.width*2 + scrollingFore, 70 }, 0.0f, 2.0f, WHITE);
 
-            DrawTexture(soinc, soincPosition.x, soincPosition.y, WHITE);  
+            DrawTextureEx(soinc, soincPosition, 0.0f, 0.2f, WHITE);  
 
         EndDrawing();
         //----------------------------------------------------------------------------------
