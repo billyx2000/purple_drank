@@ -1,6 +1,6 @@
 # NetWorld - Game Engine for IAs competition
 
-NetWorld se veut devenir un moteur de jeux basé sur la librairie multi-plateforme RayLib, respectant le principe [KISS](https://fr.wikipedia.org/wiki/Principe_KISS)  (Keep It Stupid Simple) 
+NetWorld se veut devenir un moteur de jeux fantastique basé sur la librairie multi-plateforme RayLib, respectant le principe [KISS](https://fr.wikipedia.org/wiki/Principe_KISS)  (Keep It Stupid Simple) 
 La particularité du projet est de modéliser le monde comme un réseau de positions clés sur lesquelles peuvent de baller les entités en interaction.
 
 ## Installation :) Modif
