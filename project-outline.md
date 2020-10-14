@@ -9,8 +9,8 @@ Each Functionnality groups several components to develop as UserStories under th
 
 ## Fct.1 - Project Framing.
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers:Bilal
+- @SecondaryDevelopers:Graham
 ---
 
 This functionality cover a framework for the team of developers.
@@ -24,8 +24,8 @@ This functionality cover a framework for the team of developers.
 
 ## Fct.2 - NetWorld
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers:Hugo
+- @SecondaryDevelopers:Milan
 ---
 
 NetWorld represent the center piece of the game engine. It is the programme component that glue all the others. 
@@ -41,8 +41,8 @@ It is an environment for the game entities, viewed as a planar graph modelling a
 ## Fct.3 - Entities
 
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers:Milan
+- @SecondaryDevelopers:Hugo
 ---
 
 Entities are the game element capable of actions. This functionality mainly regroups the basic interactions of those entities between them and with the NetWorld.
@@ -53,14 +53,11 @@ Entities are the game element capable of actions. This functionality mainly regr
 - Entities can act on the NetWorld (change the colour of a node for instance).
 - Entities can act over other entities (damaging them for instance).
 
-@MainDevelopers:
-
-@SecondaryDevelopers:
 
 ## Fct.4 - User Interface
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers:Najib
+- @SecondaryDevelopers:Liam
 ---
 
 This functionality focus on a graphical rendering of the NetWold and to provide a control through the mouse and keyboard.
@@ -74,8 +71,8 @@ This functionality focus on a graphical rendering of the NetWold and to provide 
 
 ## Fct.5 - Robust Development environment
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers:Graham
+- @SecondaryDevelopers:Liam
 ---
 
 - All developers can refer to a good-practice doc for code.
@@ -84,7 +81,7 @@ This functionality focus on a graphical rendering of the NetWold and to provide 
 
 ## Fct.5 - Game-play
 ---
-- @MainDevelopers:
+- @MainDevelopers:All
 - @SecondaryDevelopers:
 ---
 
@@ -92,8 +89,8 @@ It is time to define a game objectives and maybe change the name of the project.
 
 ## Fct.6 - Programme distributed programme
 ---
-- @MainDevelopers:
-- @SecondaryDevelopers:
+- @MainDevelopers:Graham
+- @SecondaryDevelopers:Liam
 ---
 
 The goal here is to distribute the game process.
