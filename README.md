@@ -1,2 +1,2 @@
 # purple_drank
-420
+Purple Drank - 420
