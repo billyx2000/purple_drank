@@ -1,24 +1,11 @@
-
-
 /*******************************************************************************************
 *
-*   raylib [core] example - Basic window
-*
-*   Welcome to raylib!
-*
-*   To test examples in Notepad++, provided with default raylib installer package, 
-*   just press F6 and run [raylib_compile_execute] script, it will compile and execute.
-*   Note that compiled executable is placed in the same folder as .c file
-*
-*   You can find all basic examples on [C:\raylib\raylib\examples] directory and
-*   raylib official webpage: [www.raylib.com]
-*
-*   Enjoy using raylib. :)
+*   raylib [textures] example - Texture loading and drawing
 *
 *   This example has been created using raylib 1.0 (www.raylib.com)
 *   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
 *
-*   Copyright (c) 2013-2020 Ramon Santamaria (@raysan5)
+*   Copyright (c) 2014 Ramon Santamaria (@raysan5)
 *
 ********************************************************************************************/
 
@@ -31,10 +18,14 @@ int main(void)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-    //--------------------------------------------------------------------------------------
+    InitWindow(screenWidth, screenHeight, "raylib [textures] example - texture loading and drawing");
+    InitAudioDevice();
+    // NOTE: Textures MUST be loaded after Window initialization (OpenGL context is required)
+    Texture2D background = LoadTexture("./src2/Background/img/menu/background.png");
+    Music smash=LoadMusicStream("./src2/Background/img/menu/smash.mp3");
+    PlayMusicStream(smash);
+    // Texture loading
+    //---------------------------------------------------------------------------------------
 
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
@@ -50,17 +41,18 @@ int main(void)
 
             ClearBackground(RAYWHITE);
 
-            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-
+            DrawTexture(background, screenWidth/2 - background.width/2, screenHeight/2 - background.height/2, WHITE);
+            DrawText("PRESS ENTER TO PLAY",220,80,30,WHITE);		
         EndDrawing();
         //----------------------------------------------------------------------------------
     }
 
     // De-Initialization
     //--------------------------------------------------------------------------------------
-    CloseWindow();        // Close window and OpenGL context
+    UnloadTexture(background);       // Texture unloading
+    UnloadMusicStream(smash);
+    CloseWindow();                // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
     return 0;
 }
-
