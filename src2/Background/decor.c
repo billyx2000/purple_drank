@@ -22,9 +22,9 @@ int main(void)
 
     // NOTE: Be careful, background width must be equal or bigger than screen width
     // if not, texture should be draw more than two times for scrolling effect
-    Texture2D background = LoadTexture("img/lvl1/1.png");
-    Texture2D midground = LoadTexture("img/lvl1/2.png");
-    Texture2D foreground = LoadTexture("img/lvl1/3.png");
+    Texture2D background = LoadTexture("img/lvl2/1.png");
+    Texture2D midground = LoadTexture("img/lvl2/2.png");
+    Texture2D foreground = LoadTexture("img/lvl2/3.png");
 
     float scrollingBack = 0.0f;
     float scrollingMid = 0.0f;
