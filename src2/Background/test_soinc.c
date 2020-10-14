@@ -44,20 +44,18 @@ int main(void)
     {
         // Update
         //----------------------------------------------------------------------------------
-        scrollingBack -= 0.1f;
-        scrollingMid -= 0.5f;
-        scrollingFore -= 1.0f;
+        scrollingBack -= 0.2f;
 
         // NOTE: Texture is scaled twice its size, so it sould be considered on scrolling
-        if (scrollingBack <= -background.width*2) scrollingBack = 0;
+        /*if (scrollingBack <= -background.width*2) scrollingBack = 0;
         if (scrollingMid <= -midground.width*2) scrollingMid = 0;
-        if (scrollingFore <= -foreground.width*2) scrollingFore = 0;
+        if (scrollingFore <= -foreground.width*2) scrollingFore = 0;*/
         //----------------------------------------------------------------------------------
 
 	//Test Déplacement
-	if (IsKeyDown(KEY_RIGHT)) soincPosition.x += 5.0f;
-        if (IsKeyDown(KEY_LEFT)) soincPosition.x -= 5.0f;
-        if (IsKeyDown(KEY_UP)) soincPosition.y -= 2.0f;
+	if (IsKeyDown(KEY_RIGHT)) { scrollingBack -= 0.3f; scrollingMid -= 0.5f; scrollingFore -= 1.0f;}
+        if (IsKeyDown(KEY_LEFT)) { scrollingBack -= 0.3f; scrollingMid += 0.5f; scrollingFore += 1.0f;}
+        if (IsKeyDown(KEY_UP)){ soincPosition.y -= 10.0f;}
         if (IsKeyDown(KEY_DOWN)) soincPosition.y += 2.0f;
 
         // Draw
