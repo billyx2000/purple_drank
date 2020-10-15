@@ -77,6 +77,9 @@ int main(void)
         
         UpdatePlayer(&soinc,&decor, deltaTime);
         
+        if(decor.scrollingBack <= -decor.background.width*2) decor.scrollingBack = 0;
+    	if(decor.scrollingMid <= -decor.midground.width*2) decor.scrollingMid = 0;
+    	if(decor.scrollingFore <= -decor.foreground.width*2) decor.scrollingFore = 0;
         
 
         // Draw
@@ -146,5 +149,6 @@ void UpdatePlayer(Player *player,Decor *decor, float delta)
     {
         player->canJump = true;
     }
+    
 
 }
