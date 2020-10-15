@@ -58,7 +58,7 @@ int main(void)
     decor.background = LoadTexture("img/lvl1/1.png");
     decor.midground = LoadTexture("img/lvl1/2.png");
     decor.foreground = LoadTexture("img/lvl1/3.png");
-    decor.scrollingBack = 0.0f;
+    decor.scrollingBack = 0.3f;
     decor.scrollingMid = 0.0f;
     decor.scrollingFore = 0.0f;
     
@@ -77,9 +77,9 @@ int main(void)
         
         UpdatePlayer(&soinc,&decor, deltaTime);
         
-        if(decor.scrollingBack <= -decor.background.width*2) decor.scrollingBack = 0;
-    	if(decor.scrollingMid <= -decor.midground.width*2) decor.scrollingMid = 0;
-    	if(decor.scrollingFore <= -decor.foreground.width*2) decor.scrollingFore = 0;
+        if(decor.scrollingBack <= -decor.background.width*1) decor.scrollingBack = 0;
+    	if(decor.scrollingMid <= -decor.midground.width*1) decor.scrollingMid = 0;
+    	if(decor.scrollingFore <= -decor.foreground.width*1) decor.scrollingFore = 0;
         
 
         // Draw
