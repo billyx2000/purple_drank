@@ -46,7 +46,7 @@ int main(void)
     InitWindow(screenWidth, screenHeight, "raylib [textures] example - background scrolling");
 
     Player soinc = { 0 };
-    soinc.position = (Vector2){ (float)screenWidth/2, (float)screenHeight/1.3 };
+    soinc.position = (Vector2){ (float)screenWidth/2, (float)screenHeight/1.8 };
     soinc.player = LoadTexture("../Game/img/soinc.png");
     soinc.canJump = true;
     soinc.sol = true;
@@ -58,9 +58,15 @@ int main(void)
     decor.background = LoadTexture("img/lvl1/1.png");
     decor.midground = LoadTexture("img/lvl1/2.png");
     decor.foreground = LoadTexture("img/lvl1/3.png");
-    decor.scrollingBack = 0.3f;
+    decor.scrollingBack = 0.0f;
     decor.scrollingMid = 0.0f;
     decor.scrollingFore = 0.0f;
+    
+    Camera2D camera = { 0 };
+    camera.target = (Vector2){ soinc.position.x + 20, soinc.position.y + 20 };
+    camera.offset = (Vector2){ screenWidth/2, screenHeight/1.5 };
+    camera.rotation = 0.0f;
+    camera.zoom = 1.0f;
     
     
 
@@ -75,7 +81,11 @@ int main(void)
 
         float deltaTime = GetFrameTime();
         
+        decor.scrollingBack -= 0.2f;
+        
         UpdatePlayer(&soinc,&decor, deltaTime);
+        
+        camera.target = (Vector2){ soinc.position.x + 20, soinc.position.y + 20 };
         
         if(decor.scrollingBack <= -decor.background.width*1) decor.scrollingBack = 0;
     	if(decor.scrollingMid <= -decor.midground.width*1) decor.scrollingMid = 0;
@@ -87,6 +97,8 @@ int main(void)
         BeginDrawing();
 
             ClearBackground(GetColor(0x052c46ff));
+            
+            BeginMode2D(camera);
 
             // Draw background image twice
             // NOTE: Texture is scaled twice its size
@@ -130,8 +142,8 @@ void Unload(Decor *decor)
 
 void UpdatePlayer(Player *player,Decor *decor, float delta)
 {
-    if (IsKeyDown(KEY_RIGHT)) { decor->scrollingBack -= 0.3f; decor->scrollingMid -= 0.5f; decor->scrollingFore -= 1.0f;}
-    if (IsKeyDown(KEY_LEFT)) { decor->scrollingBack -= 0.3f; decor->scrollingMid += 0.5f; decor->scrollingFore += 1.0f;}
+    if (IsKeyDown(KEY_RIGHT)) player -> position.x += 2;
+        else if (IsKeyDown(KEY_LEFT)) player-> position.x -= 2;
 
     if (IsKeyDown(KEY_SPACE) && player->canJump )
     {
@@ -141,7 +153,7 @@ void UpdatePlayer(Player *player,Decor *decor, float delta)
         
     }
 
-    if(player->position.y <= 345)
+    if(player->position.y <= 250)
     {
         player->position.y -= player->speed*delta;
     }
