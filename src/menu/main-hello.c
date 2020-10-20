@@ -9,7 +9,7 @@
 *
 ********************************************************************************************/
 
-#include "raylib.h"
+#include "../../lib/raylib/raylib.h"
 
 int main(void)
 {
@@ -21,8 +21,8 @@ int main(void)
     InitWindow(screenWidth, screenHeight, "raylib [textures] example - texture loading and drawing");
     InitAudioDevice();
     // NOTE: Textures MUST be loaded after Window initialization (OpenGL context is required)
-    Texture2D background = LoadTexture("../../assets/menu/background.png");
-    Music smash=LoadMusicStream("../../assets/menu/smash.mp3");
+    Texture2D background = LoadTexture("../../res/menu/background.png");
+    Music smash=LoadMusicStream("../../res/menu/smash.mp3");
     PlayMusicStream(smash);
     // Texture loading
     //---------------------------------------------------------------------------------------
@@ -42,7 +42,7 @@ int main(void)
             ClearBackground(RAYWHITE);
 
             DrawTexture(background, screenWidth/2 - background.width/2, screenHeight/2 - background.height/2, WHITE);
-            DrawText("PRESS ENTER TO PLAY",220,80,30,WHITE);		
+            DrawText("PRESS ENTER TO PLAY",220,80,30,WHITE);
         EndDrawing();
         //----------------------------------------------------------------------------------
     }
