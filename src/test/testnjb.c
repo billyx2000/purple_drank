@@ -15,11 +15,11 @@
 *
 ********************************************************************************************/
 
-#include "../raylib/src/raylib.h"
+#include "../srcray/raylib.h"
 
 #define PHYSAC_IMPLEMENTATION
 #define PHYSAC_NO_THREADS
-#include "../raylib/src/physac.h"
+#include "../srcray/physac.h"
 
 #define VELOCITY    0.5f
 
